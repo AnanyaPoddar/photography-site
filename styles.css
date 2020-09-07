@@ -1,0 +1,174 @@
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.9em;
+  font-weight:200;
+  padding: 10px;
+}
+
+p {
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 15px;
+  background-color: #e3f2fd;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+/* FOOTER ICONS */
+.social-icon {
+  margin: 10px;
+}
+
+.not-home-footer {
+  margin-top: 60px;
+}
+
+/* NAVBAR */
+.navbar-light {
+  /*for some reason, the default on bootstrap navbar is not 100% */
+  width: 100%;
+  padding-bottom: 1%;
+  /* This makes the transparent background on the homepage and also keeps it at top of the page*/
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.nav-link {
+  /* font-family: 'Cuprum', sans-serif; */
+  padding-right: 20px;
+}
+
+.nav-item a:hover, .current {
+  background-color: white;
+}
+
+/* need this spacer because the navbar position is fixed, and as such is taken out
+of workflow and title and things are pushed beneath it, so spacer is around the height of the navbar; */
+.spacer {
+  height: 90px;
+}
+
+/* HOME PAGE */
+.title-slide {
+  position: fixed;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* CAROUSEL */
+.carousel-slide {
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* PORTFOLIO PAGES */
+/* ADDING PADDING TO THE ENTIRE SECTION MAKES THE AREA FOR CONTENT SMALLER SO PUSHES THE CONTENT INWARD */
+.photo-cards {
+  padding: 0 15%;
+}
+
+.col-sm-12 {
+  height: 1%;
+  position: relative;
+}
+
+.row {
+  margin: 15px;
+}
+
+.card-container {
+  display: grid;
+  perspective: 1000px;
+}
+
+.card-flip, .card-container {
+  transform-style: preserve-3d;
+}
+
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+}
+
+.back p {
+  /* text-align: left; */
+  margin: 6% 5%;
+}
+
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+}
+
+.card-flip {
+  display: grid;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+}
+
+.front {
+  grid-area: frontAndBack;
+}
+
+.back {
+  transform: rotateY(-180deg);
+}
+
+/* CONTACT */
+.contact-info {
+  padding: 0 90px;
+  text-align: left;
+}
+
+.contact {
+  padding-top: 10px;
+}
+
+.contact-photo img {
+  width: 90%;
+}
+
+.contact-btn {
+  margin-top: 10px;
+  background-color: #e3f2fd;
+  color: black;
+}
+
+/*for small and medium screens, the toggler button is enabled, and you want to
+change the colour of the dropdown menu to not be clear on the homepage */
+
+@media screen and (max-width: 1027px) {
+  .title-slide {
+    top:25%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #mainNavBar {
+    background-color: #e3f2fd;
+  }
+  .title-slide {
+    top:17%;
+  }
+  .title-slide h1 {
+    font-size: 1.9em;
+    padding:5px;
+  }
+}
