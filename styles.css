@@ -76,7 +76,7 @@ of workflow and title and things are pushed beneath it, so spacer is around the 
 /* PORTFOLIO PAGES */
 /* ADDING PADDING TO THE ENTIRE SECTION MAKES THE AREA FOR CONTENT SMALLER SO PUSHES THE CONTENT INWARD */
 .photo-cards {
-  padding: 0 15%;
+  padding: 0 15% 8% 15%;
 }
 
 .col-sm-12 {
@@ -151,12 +151,15 @@ of workflow and title and things are pushed beneath it, so spacer is around the 
   color: black;
 }
 
-/*Sticky footer*/
-.vsc-initialized{
-  min-height: calc(100vh - 50px);
+html {
+    position: relative;
+    min-height: 100%;
 }
-.footer {
-  height: 50px;
+
+.footer{
+  position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 /*for small and medium screens, the toggler button is enabled, and you want to
