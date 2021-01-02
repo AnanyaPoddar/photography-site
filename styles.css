@@ -151,6 +151,14 @@ of workflow and title and things are pushed beneath it, so spacer is around the 
   color: black;
 }
 
+/*Sticky footer*/
+.vsc-initialized{
+  min-height: calc(100vh - 50px);
+}
+.footer {
+  height: 50px;
+}
+
 /*for small and medium screens, the toggler button is enabled, and you want to
 change the colour of the dropdown menu to not be clear on the homepage */
 
